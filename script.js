@@ -28,7 +28,7 @@ const compliments = [
 
 // 3. Listen for a button click
 generateBtn.addEventListener("click", () => {
-  console;
+  console.log("Button clicked! Generating a compliment...");
   // 4. Pick a compliment at random
   const randomIndex = Math.floor(Math.random() * compliments.length);
   const randomCompliment = compliments[randomIndex];
