@@ -26,6 +26,8 @@ const compliments = [
   "You are a true friend.",
 ];
 
+let count = 0; // Counter for image URL to ensure a new image is fetched each time
+
 // 3. Listen for a button click
 generateBtn.addEventListener("click", () => {
   console.log("Button clicked! Generating a compliment...");
@@ -35,7 +37,7 @@ generateBtn.addEventListener("click", () => {
 
   // 5. Update the page with the compliment and a random image
   output.innerHTML = `
-  <img src="https://picsum.photos/600/400" alt="Random Image" />
+  <img src="https://picsum.photos/600/400?${count++}" alt="Random Image" />
   <p>${randomCompliment}</p>
   `;
 });
